@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index/assets/css/templatemo.css">
+    <link rel="stylesheet" href="../index/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../index/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../index/assets/css/bootstrap.min.css">
+    
+   
+    
+    <title>Borrar Venta</title>
+    <style>
+        body {
+           background-color: #FFE082;
+            font-family: Arial, sans-serif;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .col-md-12 {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffbfb0;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-row {
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input.form-control {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button.btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button.btn:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+    <div class="container text-light">
+        <div class="w-100 d-flex justify-content-between">
+            
+            
+            <div>
+                <a class="text-light" href="" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                <a class="text-light" href="" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                <a class="text-light" href="" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                <a class="text-light" href="" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Close Top Nav -->
+
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+            Tienda
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+            <div class="flex-fill">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index/index.html">Inicio</a>
+                    </li>
+                    
+                     <li class="nav-item">
+                    <a class="nav-link" id="clientesLink" href="#">Clientes <i class="bi bi-chevron-down"></i></a>
+                    <div id="clientesDropdown" class="list-unstyled collapse">
+                        <div class="col">
+                            <a href="../php/mostrarClientes.php">Lista de Clientes</a>
+                        </div>
+                        <div class="col">
+                        <div class="col">
+                            <a href="../html/InsertarCliente.html">Insertar Cliente</a>
+                        </div>
+                        <div class="col">
+                            <a href="../html/borrarCli.html">Borrar Cliente</a>
+                    
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="ProductosLink" href="#">Productos <i class="bi bi-chevron-down"></i></a>
+                    <div id="ProductosDropdown" class="list-unstyled collapse">
+                        <div class="col">
+                            <a href="../php/mostrarPro.php">Lista de Productos</a>
+                        </div>
+                        <div class="col">
+                        <div class="col">
+                            <a href="../html/InsertarPro.html">Insertar Producto</a>
+                        </div>
+                        <div class="col">
+                            <a href="../html/borrarPro.html">Borrar Producto</a>
+                    
+                    </div>
+                </li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ventasLink" href="#">Ventas <i class="bi bi-chevron-down"></i></a>
+                <div id="ventasDropdown" class="list-unstyled collapse">
+                    <div class="col">
+                        <a href="../php/mostrarVentas.php">Lista de Ventas</a>
+                    </div>
+                    <div class="col">
+                    <div class="col">
+                        <a href="../html/insertarVenta.html">Insertar Venta</a>
+                    </div>
+                    <div class="col">
+                        <a href="../html/borrar.Venta.html">Borrar Venta</a>
+                
+                </div>
+            </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+           
+        </div>
+
+    </div>
+</nav>
+<script>
+document.getElementById('clientesLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('clientesDropdown').classList.toggle('show');
+    document.querySelector('#clientesLink i').classList.toggle('bi-chevron-up');
+});
+</script>
+<script>
+document.getElementById('ProductosLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('ProductosDropdown').classList.toggle('show');
+    document.querySelector('#ProductosLink i').classList.toggle('bi-chevron-up');
+});
+</script>
+<script>
+document.getElementById('ventasLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('ventasDropdown').classList.toggle('show');
+    document.querySelector('#ventasLink i').classList.toggle('bi-chevron-up');
+});
+</script>
+
+
+    <div class="col-12 col-md-12"> 
+<form action="../php/borrarPro.php" method="POST">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="Nombre"><h1>Nombre del Producto</h1></label>
+      <input name="Nombre" type="text" class="form-control" placeholder="Nombre del Producto">
+    </div>
+    
+  </div>
+ 
+
+<div class="form-group">
+  <button name="insertar" type="submit" class="btn btn-primary  btn-block">eliminar</button>
+</div>
+</form>
+    </div> 
+
+
+</body>
+</html>
+

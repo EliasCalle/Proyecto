@@ -85,15 +85,24 @@
                                 <a href="../html/borrarPro.html">Borrar Producto</a>
                         
                         </div>
+                <!--   </li>
+                   <li class="nav-item">
+                        <a class="nav-link" id="ResturantesLink" href="#">Restaurantes <i class="bi bi-chevron-down"></i></a>
+                        <div id="RestaurantesDropdown" class="list-unstyled collapse">
+                            <div class="col">
+                                <a href="../html/InsertarRestaurante.html">Insertar Restaurante</a>
+                            </div> 
+                            
+                        </div>
                     </li>
-                </li>
+                -->
                 <li class="nav-item">
                     <a class="nav-link" id="ventasLink" href="#">Ventas <i class="bi bi-chevron-down"></i></a>
                     <div id="ventasDropdown" class="list-unstyled collapse">
                         <div class="col">
                             <a href="../php/mostrarVentas.php">Lista de Ventas</a>
                         </div>
-                        <div class="col">
+                       
                         <div class="col">
                             <a href="../html/insertarVenta.html">Insertar Venta</a>
                         </div>
@@ -101,11 +110,13 @@
                             <a href="../html/borrar.Venta.html">Borrar Venta</a>
                     
                     </div>
+                    
                 </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">Contacto</a>
                         </li>
                     </ul>
+
                 </div>
                
             </div>
@@ -127,12 +138,21 @@
     });
 </script>
 <script>
+    document.getElementById('RestaurantesLink').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('RestaurantesDropdown').classList.toggle('show');
+        document.querySelector('#RestaurantesLink i').classList.toggle('bi-chevron-up');
+    });
+</script>
+<script>
     document.getElementById('ventasLink').addEventListener('click', function(e) {
         e.preventDefault();
         document.getElementById('ventasDropdown').classList.toggle('show');
         document.querySelector('#ventasLink i').classList.toggle('bi-chevron-up');
     });
 </script>
+
+
 
     <!-- Close Header -->
 

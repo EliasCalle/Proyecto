@@ -1,6 +1,7 @@
 <?php
 
 $Nombre = $_POST['Nombre'];
+$Contraseña=$_POST['Contraseña'];
 $Telefono = $_POST['Telefono'];
 $Direccion  = $_POST['Direccion'];
 
@@ -12,8 +13,8 @@ if (mysqli_connect_errno())
     exit;
 }
 //INSERT INTO `usuarios` (`Idusr`, `Nombre`, `Clave`, `Fecha`) VALUES (NULL, 'ronald', '123456', '2023-08-01');
-$insert_query = "INSERT INTO `cliente`(`Nombre`,`Telefono`,`Direccion`) 
-VALUES ('".mysqli_real_escape_string($mysqli_link, $Nombre)."','".mysqli_real_escape_string($mysqli_link, $Telefono)."','".mysqli_real_escape_string($mysqli_link, $Direccion)."')";
+$insert_query = "INSERT INTO `cliente`(`Nombre`,`Contraseña`,`Telefono`,`Direccion`) 
+VALUES ('".mysqli_real_escape_string($mysqli_link, $Nombre)."','".mysqli_real_escape_string($mysqli_link, $Contraseña)."','".mysqli_real_escape_string($mysqli_link, $Telefono)."','".mysqli_real_escape_string($mysqli_link, $Direccion)."')";
  
 // run the insert query 
 If (mysqli_query($mysqli_link, $insert_query)) {

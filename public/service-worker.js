@@ -7,7 +7,7 @@ const urlsToCache = [
   '/offline.html',
   '/images/notification-icon.png',
   '/images/notification-badge.png',
-  // Agrega aquí más recursos que deseas almacenar en caché
+  
 ];
 
 self.addEventListener('install', event => {
@@ -66,4 +66,4 @@ self.addEventListener('notificationclick', event => {
   clients.openWindow('https://tupagina.com');
 });
 
-// Más funcionalidades personalizadas aquí...
+

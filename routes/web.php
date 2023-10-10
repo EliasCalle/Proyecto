@@ -17,6 +17,10 @@ use App\Http\Controllers\RestauranteController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/service-worker.js', function () {
+    return response(file_get_contents(public_path('service-worker.js')))
+        ->header('Content-Type', 'text/javascript');
+});
 Route::resource('platos', PlatosController::class);
 Route::resource('restaurantes', RestauranteController::class);
 Auth::routes();

@@ -47,6 +47,18 @@
   </main>
  
   <!-- Bootstrap JavaScript Libraries -->
+  <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => {
+                console.log('Service Worker registrado con éxito:', registration);
+            })
+            .catch(error => {
+                console.log('Error al registrar el Service Worker:', error);
+            });
+    }
+</script>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
   </script>

@@ -42,6 +42,8 @@ class PlatosController extends Controller
         $platos->save();
         return redirect()->back();
 
+        
+
         //
     }
 

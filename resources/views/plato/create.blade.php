@@ -39,11 +39,10 @@
         </div>
         
         <div class="mb-3">
-          <label for="" class="form-label">Imagen</label>
-          <input type="text"
-            class="form-control" name="Imagen" id="" aria-describedby="helpId" placeholder="">
-         
-        </div>
+    <label for="" class="form-label">Imagen</label>
+    <input type="file" class="form-control" name="Imagen" id="" aria-describedby="helpId" placeholder="">
+</div>
+
         
       </div>
       <div class="modal-footer">

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlatosController;
 use App\Http\Controllers\RestauranteController;
+use App\Http\Controllers\TeEventController;
+use App\http\Controllers\TeEventEvent;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +29,8 @@ Auth::routes();
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', function(){
+    return view('welcome');
+});
+
+Route::get('/test',[TeEventController::class , 'testingEvents']);

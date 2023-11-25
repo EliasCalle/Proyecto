@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Restaurante;
-use App\Models\Platos;
+use App\Models\Clientes;
 use Illuminate\Http\Request;
 
-class RestauranteController extends Controller
+class ClientesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $restaurantes=Restaurante::all();
-        return view('restaurante.index',compact('restaurantes'));
+       
+        $clientes=Clientes::all();
+        return view('clientes.index',compact('clientes'));
         //
     }
 
@@ -31,20 +31,20 @@ class RestauranteController extends Controller
      */
     public function store(Request $request)
     {
-        $restaurantes=new Restaurante;
+        $clientes=new Clientes;
        
-        $restaurantes->Nombre=$request->input('Nombre');
-        $restaurantes->Direccion=$request->input('Direccion');
-        $restaurantes->Telefono=$request->input('Telefono');
-        $restaurantes->save();
+        $clientes->Nombre=$request->input('Nombre');
+        $clientes->Direccion=$request->input('Direccion');
+        $clientes->Telefono=$request->input('Telefono');
+        $clientes->save();
         return redirect()->back();
-      
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Restaurante $restaurante)
+    public function show(Clientes $clientes)
     {
         //
     }
@@ -62,12 +62,12 @@ class RestauranteController extends Controller
      */
     public function update(Request $request,$ID)
     {
-        $restaurantes=Restaurante::find($ID);
-        $restaurantes->Nombre=$request->input('Nombre');
-        $restaurantes->Direccion=$request->input('Direccion');
-        $restaurantes->Telefono=$request->input('Telefono');
+        $clientes=Clientes::find($ID);
+        $clientes->Nombre=$request->input('Nombre');
+        $clientes->Direccion=$request->input('Direccion');
+        $clientes->Telefono=$request->input('Telefono');
       
-        $restaurantes->save();
+        $clientes->save();
         return redirect()->back();
         //
     }
@@ -77,9 +77,9 @@ class RestauranteController extends Controller
      */
     public function destroy($ID)
     {
-        $restaurantes=Restaurante::find($ID);
+        $clientes=Clientes::find($ID);
       
-        $restaurantes->delete();
+        $clientes->delete();
         return redirect()->back();
         //
     }

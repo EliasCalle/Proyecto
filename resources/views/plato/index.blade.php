@@ -27,7 +27,9 @@
                 <td>{{$plato->Nombre}}</td>
                 <td>{{$plato->Precio}}</td>
                 <td>{{$plato->Stock}}</td>
-                <td>{{$plato->Imagen}}</td>
+                <td>
+                <img src="{{asset('storage').'/'.$plato->Imagen}}" alt="" width="150">    
+                </td>
                 <td>
                     <button type="button" class="btn btn-success" data-bs-toggle="modal"
                         data-bs-target="#edit{{$plato->ID}}">Editar</button>

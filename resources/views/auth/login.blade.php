@@ -29,12 +29,12 @@
                 <div class="text-center">
                   <img src="{{ asset('assets/logo.png')}}"
                     style="width: 185px;" alt="logo">
-                  <h4 class="mt-1 mb-5 pb-1">Login</h4>
+                  <h2 class="mt-1 mb-5 pb-1">Iniciar Sesion</h2>
                 </div>
 
                 <form action="{{ route('login')}}" method="post">
                   @csrf
-                  <p>Iniciar Sesion</p>
+                
 
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form2Example11">Correo</label>
@@ -50,7 +50,7 @@
                   </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
-                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Ingresar</button>
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" >Ingresar</button>
                     
                   </div>
 

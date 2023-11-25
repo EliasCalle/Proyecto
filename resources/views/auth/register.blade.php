@@ -28,13 +28,12 @@
                 <div class="text-center">
                   <img src="{{ asset('assets/logo.png')}}"
                     style="width: 185px;" alt="logo">
-                  <h4 class="mt-1 mb-5 pb-1">Login</h4>
+                  <h4 class="mt-1 mb-5 pb-1">Registrarse</h4>
                 </div>
 
                 <form action="{{ route('register')}}" method="post">
                   @csrf
-                  <p>Registrate</p>
-
+                  
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form2Example11">Nombre</label>
                     <input type="text" name="name" id="form2Example11" class="form-control"

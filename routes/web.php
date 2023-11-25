@@ -2,9 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlatosController;
+use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\RestauranteController;
 use App\Http\Controllers\TeEventController;
 use App\http\Controllers\TeEventEvent;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,21 +21,35 @@ use App\http\Controllers\TeEventEvent;
 |
 */
 
+Route::post('/login', [LoginController::class, 'login'])->name('login.custom');
+
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
+
+Route::get('/register', function () {
+    return redirect('/login');
+})->name('register');
+
 Route::get('/service-worker.js', function () {
     return response(file_get_contents(public_path('service-worker.js')))
         ->header('Content-Type', 'text/javascript');
 });
+
 Route::resource('platos', PlatosController::class);
 Route::resource('restaurantes', RestauranteController::class);
+Route::resource('clientes', ClientesController::class);
+
 Auth::routes();
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', function(){
+Route::get('/test', [TeEventController::class, 'testingEvents']);
+
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/test',[TeEventController::class , 'testingEvents']);
+Route::get('/logout', function () {
+    Auth::logout();
+    return redirect('/login');
+})->name('logout');

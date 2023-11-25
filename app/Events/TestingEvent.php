@@ -30,7 +30,7 @@ class TestingEvent implements ShouldBroadcast
     public function broadcastOn(): array
     {
         return [
-            new PrivateChannel('name-nombre'),
+            new PrivateChannel('eliasCompra_comida'),
         ];
     }
 }

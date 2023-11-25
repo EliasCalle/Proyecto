@@ -41,7 +41,7 @@
         
         <div class="mb-3">
           <label for="" class="form-label">Imagen</label>
-          <input type="text"
+          <input type="file"
             class="form-control" name="Imagen" id="" aria-describedby="helpId" placeholder="" value="{{$plato->Imagen}}">
          
         </div>

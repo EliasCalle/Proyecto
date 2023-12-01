@@ -60,10 +60,10 @@
       color: #777;
     }
     header img {
-      max-width: 450px; /* Ancho máximo de la imagen */
-      height: auto; /* Altura ajustada automáticamente */
-      display: block; /* Para centrar la imagen */
-      margin: 0 auto; /* Para centrar la imagen horizontalmente */
+      max-width: 450px; 
+      height: auto; 
+      display: block; 
+      margin: 0 auto;
     }
   </style>
 
@@ -73,28 +73,38 @@
 </head>
 
 <body>
+
+
  
 
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
+<nav class="navbar navbar-expand navbar-dark bg-dark">
     <ul class="nav navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link"  aria-current="page">Inicio <span class="visually-hidden">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{url('restaurantes')}}">Restaurantes</a>
-      </li><br><br>
-      <li class="nav-item">
-        <a class="nav-link" href="{{url('platos')}}">Platos</a>
-      </li><br><br>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ url('clientes') }}">clientes</a>
-      </li><br><br>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('logout') }}">Cerrar Sesión</a>
-      </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page">Inicio <span class="visually-hidden">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url('restaurantes')}}">Restaurantes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url('platos')}}">Platos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('clientes') }}">Clientes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('emails') }}">Emails</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('logout') }}">Cerrar Secion</a>
+        </li><br><br>
+
+
     </ul>
-  </nav>
-  
+    
+    
+</nav>
+
   <main class="container">
     <div class="row">
       <div class="col-md-2"></div>

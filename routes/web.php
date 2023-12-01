@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlatosController;
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\RestauranteController;
+use App\Http\Controllers\EmailsController;
 use App\Http\Controllers\TeEventController;
 use App\http\Controllers\TeEventEvent;
 use App\Http\Controllers\Auth\LoginController;
@@ -20,6 +21,7 @@ use Illuminate\Support\Facades\Auth;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::post('/enviarcorreo', [App\Http\Controllers\EmailsController::class, 'enviarcorreo'])->name('enviarcorreo');
 
 Route::post('/login', [LoginController::class, 'login'])->name('login.custom');
 
@@ -39,6 +41,7 @@ Route::get('/service-worker.js', function () {
 Route::resource('platos', PlatosController::class);
 Route::resource('restaurantes', RestauranteController::class);
 Route::resource('clientes', ClientesController::class);
+Route::resource('emails', EmailsController::class);
 
 Auth::routes();
 

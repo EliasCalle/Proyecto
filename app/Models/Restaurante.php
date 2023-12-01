@@ -11,7 +11,7 @@ class Restaurante extends Model
     protected $table='restaurantes';
     protected $primaryKey='ID';
 
-    protected $fillable=['Nombre','Direccion','Telefono','Imagen'];
+    protected $fillable=['Nombre','Direccion','Telefono'];
     public $timestamps=false;
     
 }
